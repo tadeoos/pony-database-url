@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "pony-db-url"
+name = "pony-database-url"
 version = "0.1.0"
-description = ""
+description = "Use Database URLs in your Pony application"
 authors = ["Tadek Teleżyński <tadekte@gmail.com>"]
 
 [tool.poetry.dependencies]

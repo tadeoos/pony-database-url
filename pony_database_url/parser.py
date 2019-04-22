@@ -19,7 +19,7 @@ urlparse.uses_netloc.append('oracle')
 DEFAULT_ENV = 'DATABASE_URL'
 
 
-def config(env=DEFAULT_ENV, default=None, engine=None, ssl_require=False):
+def get_bind_kwargs(env=DEFAULT_ENV, default=None):
     """Returns configured DATABASE dictionary from DATABASE_URL."""
 
     config = {}
@@ -27,7 +27,7 @@ def config(env=DEFAULT_ENV, default=None, engine=None, ssl_require=False):
     s = os.environ.get(env, default)
 
     if s:
-        config = parse(s, engine, ssl_require)
+        config = parse(s)
 
     return config
 
